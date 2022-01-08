@@ -17,15 +17,18 @@ const Country = (props) => {
     setLoc("");
   };
 
-  useEffect(() => {
-    fetch(`https://corona.lmao.ninja/v2/countries/${country}?yesterday`, {
-      method: "GET",
-      redirect: "follow",
-    })
-      .then((res) => res.json())
-      .then((data) => setResults(data))
-      .catch((err) => console.log(err));
-  }, [results]);
+  useEffect(
+    (country) => {
+      fetch(`https://corona.lmao.ninja/v2/countries/${country}?yesterday`, {
+        method: "GET",
+        redirect: "follow",
+      })
+        .then((res) => res.json())
+        .then((data) => setResults(data))
+        .catch((err) => console.log(err));
+    },
+    [results]
+  );
 
   return (
     <div className="container text-center">
