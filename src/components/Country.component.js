@@ -5,13 +5,6 @@ const Country = (props) => {
   const [results, setResults] = useState([]);
   const [loc, setLoc] = useState("");
 
-  let url = `https://corona.lmao.ninja/v2/countries/${country}?yesterday`;
-
-  const requestOptions = {
-    method: "GET",
-    redirect: "follow",
-  };
-
   const changeHandler = (e) => {
     setLoc(e.target.value);
   };
@@ -25,7 +18,10 @@ const Country = (props) => {
   };
 
   useEffect(() => {
-    fetch(url, requestOptions)
+    fetch(`https://corona.lmao.ninja/v2/countries/${country}?yesterday`, {
+      method: "GET",
+      redirect: "follow",
+    })
       .then((res) => res.json())
       .then((data) => setResults(data))
       .catch((err) => console.log(err));
