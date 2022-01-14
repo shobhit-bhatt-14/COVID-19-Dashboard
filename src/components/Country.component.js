@@ -54,36 +54,48 @@ const Info = (props) => {
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Country</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-danger">{props.results.country}</p>
+          <p className="fw-bold fs-5 text-danger text-wrap text-break">
+            {props.results.country}
+          </p>
         </div>
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Total Tests</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-primary">{props.results.tests}</p>
+          <p className="fw-bold fs-5 text-primary text-wrap text-break">
+            {props.results.tests}
+          </p>
         </div>
       </div>
       <div className="row justify-content-evenly">
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Total Cases</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-primary">{props.results.cases}</p>
+          <p className="fw-bold fs-5 text-primary text-wrap text-break">
+            {props.results.cases}
+          </p>
         </div>
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Total Active</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-primary">{props.results.active}</p>
+          <p className="fw-bold fs-5 text-primary text-wrap text-break">
+            {props.results.active}
+          </p>
         </div>
       </div>
       <div className="row justify-content-evenly">
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Total Recovered</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-primary">{props.results.recovered}</p>
+          <p className="fw-bold fs-5 text-primary text-wrap text-break">
+            {props.results.recovered}
+          </p>
         </div>
         <div className="col-3 border border-3 rounded border-secondary pt-2 m-4 text-center">
           <p className="fw-bolder fs-5 text-dark">Total Deaths</p>
           <hr className="border border-2 rounded border-dark" />
-          <p className="fw-bold fs-5 text-primary">{props.results.deaths}</p>
+          <p className="fw-bold fs-5 text-primary text-wrap text-break">
+            {props.results.deaths}
+          </p>
         </div>
       </div>
     </div>
